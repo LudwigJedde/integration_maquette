@@ -1,0 +1,589 @@
+/******************************************************************************************************/
+/******************************************************************************************************/
+/*----- BASE GENERALE -----****************************************************************************/
+/******************************************************************************************************/
+/******************************************************************************************************/
+/**************** Conteneurs généraux *****************************************************************/
+body, html {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.box {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/**************** Typographie générale ***************************************************************/
+p {
+    font-weight: normal;
+    font-size: 16px;
+    margin: 15px 0px 25px;
+    color: #64686d;
+}
+span {
+    color: #45aed6;
+}
+h1,h2,h3 {
+    font-weight: 600;
+    font-family: 'roboto', sans-serif;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: inherit;
+}
+/* Paramétrage des entêtes de section récurrentes (Titre de la section + paragraphe de présentation) */
+.section_head--titre h2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 44px;
+    color: #272727;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+}
+.section_head--titre h2:before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -70px;
+    height: 1px;
+    background: #ebebeb;
+}
+.section_head--titre h2:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: -11px;
+    left: 50%;
+    margin-left: -12px;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    background: #45aed6;
+}
+.section_head--text p {
+    justify-content: center;
+    text-align: center;
+}
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/*----- HEADER -----**********************************************************************************/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/**************** Positionnement *********************************************************************/
+.header {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    /*--- transparence du menu lors du scroll ---*/
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+}
+/**************** Logo *******************************************************************************/
+.header_box--logo {
+    border: 0;
+    padding-top: 22px;
+    padding-bottom: 21px;
+   
+}
+/**************** Menu par défaut ********************************************************************/
+.header_box--defaultMenu {
+    height: 100px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header a {
+    background-color: transparent;
+    color: #555;
+    text-decoration: none;
+    line-height: 15px;
+    padding: 37px 15px 40px 15px;
+}
+.header_box--defaultMenu a:hover {
+    background: transparent;
+    border-top: 3px solid #45aed6;
+}
+.header_box_defaultMenu--isActive {
+    background: transparent;
+    border-top: 3px solid #45aed6;
+}
+.header_box_defaultMenu--noActive {
+    cursor: pointer;
+}
+/**************** Menu réduit ************************************************************************/
+.header_box_dropdownMenu--bouton {
+    display: none;
+    height: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+}
+.sr_only {
+    display: flex;   
+    flex-direction: row;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+    background-color: transparent;
+} /* Hamburger */
+.header_box_dropdownMenu--contenu {
+    display: none;
+}
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/*----- SLIDER -----**********************************************************************************/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/**************** Positionnement *********************************************************************/
+.slider {
+    background: url(../images/slider/bg1.jpg) no-repeat center;
+    background-size: cover;
+    margin-top: 110px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 600px;
+}
+/**************** Typo spécifique ********************************************************************/
+.slider nav a {
+    position: absolute;
+    z-index: 2;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    height: 70px;
+    width: 40px;
+    line-height: 70px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider p {
+    color: #fff;
+}
+.slider h1 {
+    font-weight: bold;
+    font-size: 40px;
+    color: #fff;
+}
+.slider a {
+    cursor: pointer;
+}
+/**************** Contenu du Slider ******************************************************************/
+.slider_box--contenu {
+    margin-top: 40px;
+    height: auto;
+    width: 600px;
+}
+/**************** Flèches latérales du Slider ********************************************************/
+/* Fonds des demis-cercles et positionnements i */
+.slider_box_fleches--precedent { 
+    border-radius: 0px 35px 35px 0px;
+    left: 0px;
+}
+.slider_box_fleches--suivant {
+    border-radius: 35px 0px 0px 35px;
+    right: 0px;
+}
+.slider_box_fleches--precedent i {
+    padding-right: 20px;
+}
+.slider_box_fleches--suivant i {
+    padding-left: 20px;
+}
+/* matérialisation des flèches gauches/droite */
+.fa-angle-left:before {
+    content: "\f104";
+}
+.fa-angle-right:before {
+    content: "\f105";
+}
+/**************** Bouton bleu "en savoir plus" et "Envoyer" ******************************************/
+.btn {
+    border: 1px solid transparent;
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-radius: 3px;
+    background: #45aed6;
+    border-color: #2a95be;
+    color: #fff;
+    text-decoration: none;
+    transition: color 400ms, background-color 400ms;
+}
+.btn_primary {
+    color: #fff;
+    background-color: #318daf;
+    border-color: #2e6da4;
+}
+.btn_lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+}
+.btn:hover {
+    background-color: #45aed6;
+    color: #fff;
+}
+/**************** Barre de progression "progressBar"  ************************************************/
+.slider_box--progressBar {
+    margin-top: -4px;
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+.slider_box_progressBar--Bar {
+    width: 25%;
+    max-width: 100%;
+    height: 4px;
+    background: #45aed6;
+}
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/*----- SERVICES -----********************************************************************************/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/**************** Positionnement *********************************************************************/
+.services {
+    padding: 100px 0;
+    top: -11px;
+}
+/**************** Partie Illustration "image PC" ************************************************************/
+.services_box--figure {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 50%;
+}
+.services_box_figure--imgPc {
+    height: auto;
+    width: 100%;
+}
+/**************** Partie description "services" ******************************************************/
+.services_box--description {
+    padding: 0px 15px 0px 15px;
+    width: 50%;
+    margin-top: 80px;
+    margin: 25px 0;
+}
+/* -- icône : -- */
+.services_box_description--pullLeft {
+    float: left!important;
+    width: 74px;
+    height: 74px;
+}
+.services_box_description--pullLeft>i {
+    width: 64px;
+    height: 64px;
+    font-size: 24px;
+    line-height: 64px;
+    text-align: center;
+    border-radius: 100%;
+    color: #45aed6;
+    box-shadow: inset 0 0 0 1px #d7d7d7;
+    transition: background-color 400ms, background-color 400ms;
+    position: relative;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 "FontAwesome";
+    font-size: inherit;
+    
+} /*-- Font Awesome --*/
+.services_box_description--pullLeft>i:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    margin-top: -10px;
+    right: -10px;
+    border: 4px solid #fff;
+    border-radius: 20px;
+    background: #45aed6;
+}
+.services_box_description--pullLeft>i:hover {
+    background-color: #45aed6;
+    color: #fff; 
+}
+/* -- texte : -- */
+.services h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    margin-left: 80px;
+    padding-left: 10px;
+}
+.services_box--description p {
+    margin: 0px 0px 30px 80px;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/*----- PORTFOLIO -----*******************************************************************************/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/**************** Positionnement et couleur de fond de la section ************************************/
+.portfolio {
+    padding: 100px 0px;
+    background: #f5f5f5; 
+}
+/**************** Navigation du portfolio ************************************************************/
+.portfolio_navigation--filtre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.portfolio a {
+    text-decoration: none;
+}
+/**************** Boutons du menu portfolio **********************************************************/
+/*-bordures des boutons 1 et 4-*/
+#portfolio .portfolio_navigation--filtre > li:first-child a {
+    border-radius: 5px 0 0 5px;
+}
+#portfolio .portfolio_navigation--filtre > li:last-child a {
+    border-radius: 0 5px 5px 0;
+}
+/*-flèche bas lors d'un hover ou focus-*/
+.portfolio_navigation--bouton:hover::after {
+    content: " ";
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #318daf transparent transparent transparent;
+}
+.portfolio_navigation--bouton:focus::after {
+    content: " ";
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #318daf transparent transparent transparent;
+}
+/*-état des boutons inactivés et du bouton actif -*/
+.portfolio_navigation--bouton {
+    display: block;
+    padding: 7px 15px;
+    background: #e5e5e5;
+    color: #64686d;
+    position: relative;
+} /* bouton inactif par défaut */
+.portfolio_navigation--boutonActive {
+    display: block;
+    padding: 7px 15px;
+    background: #45aed6;
+    color: #fff;
+    position: relative;
+} /* bouton actif par défaut */
+/*-flèche bas du bouton actif "all works" -*/
+.portfolio_navigation--boutonActive:after {
+    content: " ";
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #318daf transparent transparent transparent;
+}
+/*-boutons du menu si hover ou focus-*/
+.portfolio .portfolio_navigation--filtre>li a:hover {
+    display: block;
+    padding: 7px 15px;
+    background: #45aed6;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 -3px 0 0 #318daf inset;
+    transition: background 1s, color 1s;
+}
+.portfolio .portfolio_navigation--filtre>li a:focus {
+    display: block;
+    padding: 7px 15px;
+    background: #45aed6;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 -3px 0 0 #318daf inset;
+    transition: background 1s, color 1s;
+}
+/**************** items du portfolio ***********************************************************/
+/*-box album -*/
+.portfolio_box--album {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+    overflow: hidden;
+    margin: 0;
+}
+/*-box des items-*/
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 10px 20px 10px;
+    padding: 15px;
+    max-width: 250px;
+    height: 150px;
+    
+}
+figure img {
+    width: 100%;
+}
+/**** partie commentaire ***************/
+figcaption {
+    position: relative;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    width: auto;
+    min-height: 50%;
+    padding: 0 10px;
+    bottom: 70%;
+    left: 0;
+    transition: all 0.6s ease; 
+}   
+figcaption:hover {
+    opacity: 1;
+    background: rgba(0,0,0,0.4);
+}
+figcaption>h3 {
+    color: white;
+    font-size: 90%;
+    padding: 10px 10px 0px 10px;
+}
+figcaption>p {
+    color: white;
+    font-size: 75%;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px 0px 0px;
+}
+/*-- image "eye" --*/
+figcaption div{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(69,144,177);
+    border-radius: 20px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 80%;
+    top: -20px;
+}
+.fa-eye{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 26%;
+    top: 27%;
+}
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/*----- FOOTER : CARTE & CONTACT -----****************************************************************/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+.box_contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+iframe, .box_contact{
+    background-color: rgba(92,173,211, .4);
+    width: 100%;
+    position: absolute;
+    height: 600px;
+}
+form {
+    background-color: rgba(255,255,255, .8);
+    width: 300px;
+    height: 80%;
+    margin: 0 20% 0 15%;
+    padding: 20px;
+    padding-right: 30px;
+    border-radius: 3px;
+    color: black;
+}
+form span {
+    color: black;
+}
+input {
+    width: 100%;
+    height: 25px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+input:focus, textarea:focus {
+  outline:0;
+  border-color:#ffc600;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+footer {
+    display: block;
+    margin-top: 600px;
+    background-color: #45aed6;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+}
+footer p{
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px 0px; 
+    color: white;
+}

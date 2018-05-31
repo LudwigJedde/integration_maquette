@@ -1,0 +1,385 @@
+/* --- BREAKPOINTS ---
+Conditions généralement utilisées :
+Smartphones : 
+Largeurs (en pixels) : 320 à 480 (max-width: 480px)
+
+De smartphones à tablettes : 
+Largeurs (en pixels) : 481 à 767 (max-width: 767px)
+
+Tablettes à petits écrans :
+Largeurs (en pixels) : 768 à 979 (min-width: 768px) and (max-width: 979px)
+
+Ordinateurs :
+Largeurs (en pixels) : 980 à 1199 -
+
+Écrans larges :
+Largeurs (en pixels) : 1200 et plus (min-width: 1200px)
+*/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+
+/*****************************************************************************************************/
+/*---SMARTPHONE---************************************************************************************/
+/*****************************************************************************************************/
+@media only screen and (max-width: 480px){ 
+/****************@@@@-Paramètres globaux-@@@@ ********************************************************/
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    margin-top: 100px;
+} /* Conteneur global */  
+p {
+    font-size: 90%;
+    padding: 0 0px 0px 0;
+}
+.section_head--titre h2{
+    font-size: 180%;
+}
+.section_head--text p{
+    padding: 0 10px 0 10px;
+}
+/******************@@@@-Menu-@@@@*********************************************************************/
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    left: 0px;
+    width: auto;
+    margin-top: -100px;
+    height: 200px;
+}
+.header>.box {
+    margin-left: 0px;
+}
+.header_box--logo {
+    margin-top: 0px;
+    width: auto;
+    left: 0px;
+
+}    
+.header_box_dropdownMenu--bouton {
+    display: inline-flex;
+    color: #45aed6;
+    float: left;
+} /*--menu dropdown --*/
+.header_box--dropdownMenu:hover .header_box_dropdownMenu--contenu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    background-color: gainsboro;
+}
+nav {
+    display: none;
+    margin: -200px;
+} /*---disparition du menu lors du rétrécissement fenêtre---*/ 
+/******************@@@@-Slider-@@@@*******************************************************************/ 
+.slider {
+    height: 400px;
+}
+.slider>.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0px; 
+}
+.slider_box--contenu{
+    flex-direction:row; 
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    margin-top: 70px;
+} 
+.slider h1 {
+    font-size: 180%;
+}
+/******************@@@@-Services-@@@@*****************************************************************/
+.services_box--figure { 
+    width: auto;
+} /* --- box de l'image PC --- */
+.services_box_figure--imgPc {
+    padding: 0px;
+    max-width: 100%;
+    margin: 0;   
+} /* --- image PC --- */
+.services_box--description {
+    flex-direction:row; 
+    text-align: center;
+    width: auto;
+    margin-top: 40px;
+    font-size: 110%;
+    margin: 0px;
+    top: 200px;
+} /* --- texte --- */
+.services h3{
+    text-align: left;
+}
+.services_box--description p{
+    font-size: 75%;
+}
+/******************@@@@-Portfolio-@@@@****************************************************************/
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    width: auto; 
+}
+.portfolio_navigation--filtre {
+    flex-direction: column;
+}
+.portfolio_box--album {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+figcaption {
+    bottom: 56%;
+}
+figcaption h3 {
+    margin: 0px;
+    padding: 5px 10px 0px 10px;
+    font-size: 80%;
+    text-align: left;
+}
+figcaption p {
+    font-size: 70%;
+}
+.img {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+}
+.fa-eye {
+    left: 28%;
+    top: 35%;      
+}
+/******************@@@@-Carte et formulaire-@@@@******************************************************/
+.contact{
+    width: auto;
+}
+form {
+    align-self: center;
+    margin-top: 1200px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f5f5f5; 
+}
+/******************@@@@-Footer-@@@@*******************************************************************/   
+footer {
+    margin-top: 1200px;  
+}
+    
+}
+
+/*****************************************************************************************************/
+/*---SMARTPHONE A TABLETTES---************************************************************************/
+/*****************************************************************************************************/
+@media only screen and (min-width: 480px) and (max-width: 767px){
+/****************@@@@-Paramètres globaux-@@@@ ********************************************************/
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 450px;
+    height: auto;
+    margin-top:100px;
+} /*---conteneur global---*/  
+p {
+    font-size: 85%;
+    padding: 0 10px 0 10px;
+} /*--typo corps de texte --*/
+.section_head--titre h2{
+    font-size: 180%;
+} /* --- titre --- */
+.section_head--text p{
+    flex-direction:row; 
+    width: auto;
+    margin-top: 40px;
+    font-size: 85%;
+} /* --- texte --- */
+/******************@@@@-Menu-@@@@*********************************************************************/
+.header {
+    display: flex;
+}
+.header>.box {
+    flex-direction: column;
+    width: auto;
+    margin: auto;
+} 
+.header_box--logo {
+    padding: 20px 15px 15px 15px;
+}
+/******************@@@@-Slider-@@@@*******************************************************************/
+.slider_box--contenu {
+    width: auto;
+    justify-content: center;
+    padding: 30px;
+}
+.slider_box--contenu h1 {
+    font-size: 180%;
+    padding: 0 10px 0 10px;
+} /*--typo titre --*/   
+/******************@@@@-Services-@@@@*****************************************************************/ 
+.services_box--figure { 
+    width: auto;
+}
+.services>.box {
+    flex-direction: column;
+    width: auto;
+    margin: auto;
+}
+.services_box_figure--imgPc {
+    padding: 0px;
+    max-width: 100%;
+    margin: 0;   
+}
+.services_box--description {
+    margin: 0px;
+    top: 200px;
+    width:auto;
+}
+.services_box--description p {
+    width: auto;
+    margin: 50px 0 0 0;
+    font-size: 85%;
+}
+.services_box--description h3 {
+    margin: 30px 0 0 0;
+    padding: 20px 0 0 100px;
+}
+/******************@@@@-Portfolio-@@@@****************************************************************/
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    width: auto; 
+}
+.portfolio h2 {
+    font-size: 180%;    
+}
+.portfolio p {
+    flex-direction:row; 
+    width: auto;
+    font-size: 85%;
+}
+.portfolio_navigation--filtre {
+    flex-direction: column;
+}
+.portfolio_box--album {
+    width: auto;
+    height: auto;
+    margin: 0;
+} /*---box des items---*/
+figcaption>h3 {
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    font-size: 95%;
+    text-align: left;
+}
+figcaption>p {
+    margin: 5px 5px 10px 5px;
+    padding: 5px 5px 5px 5px;
+    font-size: 80%;
+    text-align: left;
+}
+/******************@@@@-Carte et formulaire de contact-@@@@*******************************************/
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+form {
+    align-self: center;
+    margin-top: 1200px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f5f5f5; 
+}
+/******************@@@@-Footer-@@@@*******************************************************************/   
+footer {
+    margin-top: 1200px;  
+}
+    
+}
+
+/*****************************************************************************************************/
+/*---TABLETTES A PETITS ECRANS---*********************************************************************/
+/*****************************************************************************************************/
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+/******************@@@@-Menu-@@@@*********************************************************************/
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    left: 0px;
+    width: auto;
+}
+/******************@@@@-Slider-@@@@*******************************************************************/
+.slider_box--contenu {
+    flex-direction:row; 
+    justify-content: center;
+    padding: 50px;
+    width: auto;
+    margin-top: 70px;
+    font-size: 90%;  
+} 
+/******************@@@@-Services-@@@@*****************************************************************/
+.services>.box {
+    flex-direction: row;
+    width: auto;
+    margin: auto;
+}
+/******************@@@@-Portfolio-@@@@****************************************************************/
+.portfolio>.box {
+    width: auto;
+}
+.portfolio_box--album {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    width: auto;
+    height: auto;
+} /*---box des items---*/ 
+/******************@@@@-Carte et formulaire contact-@@@@**********************************************/
+form {
+    justify-content: center;
+    align-self: center;
+    margin-top: 1200px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f5f5f5; 
+}  
+/******************@@@@-Footer-@@@@*******************************************************************/
+footer {
+    margin-top: 1200px;  
+}    
+}
+
+/*****************************************************************************************************/
+/*---ORDINATEURS---***********************************************************************************/
+/*****************************************************************************************************/
+@media only screen and (min-width: 980px) and (max-width: 1199px) {   
+.box {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    min-width: 900px;
+    height: auto;  
+    margin: 0px 50px 0px 50px;
+} /*---conteneur global---*/  
+}
+
+/*****************************************************************************************************/
+/*---ECRANS LARGES---*********************************************************************************/
+/*****************************************************************************************************/
+@media only screen and (min-width: 1200px) {
+form {
+    margin: 0px 20% 0px;  
+}
+}

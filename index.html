@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./images/ico/favicon.ico"/>
+        <title>Web Agency - Le site !</title>
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic" rel="stylesheet">
+        <link rel="stylesheet" href="./css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+    </head>
+    
+    <body>  
+        <header id="accueil">
+            <div class="header">
+                <div class="box">                           
+                    <div class="header_box--logo">
+                        <img src="./images/logo.png" alt="logo">
+                    </div><!--bloc logo-->
+                    <div class="header_box--dropdownMenu"><!--bloc du menu réduit-->         
+                        <button type="button" class="header_box_dropdownMenu--bouton">&#9776;
+                            <span class="sr_only">navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button><!-- menu réduit Hamburger -->
+                        <div class="header_box_dropdownMenu--contenu">
+                            <a class="header_box_defaultMenu--noActive" href="#accueil">Accueil</a>
+                            <a class="header_box_defaultMenu--noActive" href="#services">Services</a>
+                            <a class="header_box_defaultMenu--noActive" href="#portfolio">Portfolio</a>
+                            <a class="header_box_defaultMenu--noActive" href="#contact">Contact</a>
+                        </div>
+                    </div><!--menu déroulant responsive "smartphone à tablette"-->
+                    <div class="header_box--defaultMenu">
+                        <nav class="header_box_defaultMenu--nav">
+                            <a class="header_box_defaultMenu--isActive" href="#accueil">Accueil</a>
+                            <a class="header_box_defaultMenu--noActive" href="#services">Services</a>
+                            <a class="header_box_defaultMenu--noActive" href="#portfolio">Portfolio</a>
+                            <a class="header_box_defaultMenu--noActive" href="#contact">Contact</a>
+                        </nav>
+                    </div> <!-- bloc menu -->
+                </div><!-- bloc conteneur général de la page -->
+            </div>
+        </header>
+                
+        <section class="slider">
+            <div class="box">
+                <div class="slider_box--contenu">
+                    <div>
+                        <h1>
+                        <span>WEBAGENCY</span>
+                        L'AGENCE DE TOUS VOS PROJETS !
+                        </h1>
+                        <p>Vous avez un projet de site internet ? <br>Notre équipe expérimentée vous permettra de le construire et de faire de celui-ci une réalité. 
+                        </p>
+                        <a class="btn btn_lg btn_primary" href="#services">Plus d'infos</a>
+                    </div>
+                </div><!-- contenu du slider -->
+                <div>
+                    <nav>
+                        <a class="slider_box_fleches--precedent">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="slider_box_fleches--suivant">
+                            <i class="fa fa-angle-right"></i>
+                        </a> 
+                    </nav>
+                </div><!-- boutons latéraux flèches -->
+            </div><!-- bloc conteneur général de la page -->
+        </section>
+                <div class="slider_box--progressBar"><div class="slider_box_progressBar--Bar"></div></div>
+        
+        <section class="services" id="services">
+            <div class="section_head--titre">
+                <h2>Nos services</h2>
+            </div>
+            <div class="section_head--text">
+                <p>Vous êtes porteur de projet ou vous souhaitez effectuer une refonte de votre site actuel ? <br>Notre équipe est là pour vous aider !<br>Nous vous accompagnons afin de choisir au mieux le design et les technologies à mettre en place en fonction de vos objectifs.</p>
+            </div>         
+            <div class="box">
+                <div class="services_box--figure">
+                    <img class="services_box_figure--imgPc" src="./images/main-feature.png" alt="">
+                </div><!-- image pc -->
+                <div class="services_box--description">
+                    <div class="services_box_description--pullLeft"><i class="fa fa-line-chart"></i></div>
+                    <div>
+                        <h3>UX design</h3>
+                        <p>Notre équipe expérimentée vous accompagne afin d'optimiser l'expérience utilisateur de votre site. </p>
+                    </div>            
+                    <div class="services_box_description--pullLeft"><i class="fa fa-cubes"></i>
+                    </div>
+                    <div>
+                        <h3>UI design</h3>
+                        <p>Notre expérience vous accompagne également afin de rendre performante l'interaction de l'utilisateur de votre site.</p>
+                    </div>
+                    
+                    <div class="services_box_description--pullLeft"><i class="fa fa-pie-chart"></i>
+                    </div>
+                    <div>
+                        <h3>SEO</h3>
+                        <p>Des services de référencement à la hauteur de votre exigence : Nous garantissons le bon référencement de votre projet.</p>
+                    </div>
+                </div> <!-- description des services -->
+            </div><!-- bloc conteneur général de la page -->
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="section_head--titre">
+                <h2>Nos projets</h2>
+            </div> <!-- Titre entête du portfolio -->
+            <div class="section_head--text">
+                <p>Venez découvrir ci-dessous nos plus belles réalisations. <br> Pour nous rencontrer, n'hésitez pas à nous contacter via le formulaire en bas de page !</p>
+            </div> <!-- Texte entête du portfolio -->
+            <div>
+                <ul class="portfolio_navigation--filtre">
+                    <li><a class="portfolio_navigation--boutonActive" href="#portfolio">All works</a></li>
+                    <li><a class="portfolio_navigation--bouton" href="#portfolio">Creative</a></li>
+                    <li><a class="portfolio_navigation--bouton" href="#portfolio">Corporate</a></li>
+                    <li><a class="portfolio_navigation--bouton" href="#portfolio">Portfolio</a></li>
+                </ul><!-- Navigation du portfolio -->
+            </div>        
+               
+            <div class="box">
+                <div class="portfolio_box--album">
+                    
+                <figure>
+                    <img src="./images/portfolio/01.jpg" alt="retina-ready">
+                    <figcaption>
+                        <h3>Création de sites responsive<br> et "retina-ready"</h3>
+                        <p>Cliquez sur l'oeil pour plus d'infos</p>
+                        <div>
+                            <p>
+                            <a href="./images/portfolio/full.jpg"><i class="fa fa-eye"></i></a>
+                            </p>
+                        </div>
+                    </figcaption> <!-- information item portfolio description INvisible -->
+                </figure> <!-- Item 1 du portfolio -->
+                    
+                <figure>
+                    <img src="./images/portfolio/02.jpg" alt="designs personnalisés">
+                    <figcaption>
+                        <h3>Création de designs<br> personnalisés</h3>
+                        <p>Cliquez sur l'oeil pour plus d'infos</p>
+                        <div>
+                            <p>
+                                <a href="./images/portfolio/full.jpg"><i class="fa fa-eye"></i></a>
+                            </p>
+                        </div>
+                    </figcaption>
+                </figure> <!-- Item 2 du portfolio -->
+                    
+                <figure>
+                    <img src="./images/portfolio/03.jpg" alt="vos propres thèmes">
+                    <figcaption>
+                        <h3>Création de sites respectant<br>vos propres thèmes</h3>
+                        <p>Cliquez sur l'oeil pour plus d'infos</p>
+                        <div>
+                            <p>
+                                <a href="./images/portfolio/full.jpg"><i class="fa fa-eye"></i></a>
+                            </p>
+                        </div>
+                    </figcaption>
+                </figure> <!-- Item 3 du portfolio -->
+                   
+                <figure>
+                    <img src="./images/portfolio/04.jpg" alt="catalogues de thèmes">
+                    <figcaption>
+                        <h3>Un catalogue de thèmes<br> à votre disposition</h3>
+                        <p>Cliquez sur l'oeil pour plus d'infos</p>
+                        <div>
+                            <p>
+                                <a href="./images/portfolio/full.jpg"><i class="fa fa-eye"></i></a>
+                            </p>
+                        </div>
+                    </figcaption>
+                </figure> <!-- Item 4 du portfolio -->
+                   
+                <figure>
+                    <img src="./images/portfolio/05.jpg" alt="outils e-commerce">
+                    <figcaption>
+                        <h3>Notre expérience<br> en outils d'e-commerce</h3>
+                        <p>Cliquez sur l'oeil pour plus d'infos</p>
+                        <div>
+                            <p>
+                                <a href="./images/portfolio/full.jpg"><i class="fa fa-eye"></i></a>
+                            </p>
+                        </div>
+                    </figcaption>
+                </figure> <!-- Item 5 du portfolio -->
+                   
+                <figure>
+                    <img src="./images/portfolio/06.jpg" alt="projets à l'international">
+                    <figcaption>
+                        <h3>Nos différents projets<br> à l'international</h3>
+                        <p>Cliquez sur l'oeil pour plus d'infos</p>
+                        <div>
+                            <p>
+                                <a href="./images/portfolio/full.jpg"><i class="fa fa-eye"></i></a>
+                            </p>
+                        </div>
+                    </figcaption>
+                </figure> <!-- Item 6 du portfolio -->
+        
+                <figure>
+                    <img src="images/portfolio/07.jpg" alt="équipes formées aux dernières technos">
+                    <figcaption>
+                        <h3>Nos équipes formées aux<br>nouvelles technologies du web</h3>
+                        <p>Cliquez sur l'oeil pour plus d'infos</p>
+                        <div>
+                            <p>
+                                <a href="./images/portfolio/full.jpg"><i class="fa fa-eye"></i></a>
+                            </p>
+                        </div>
+                    </figcaption>
+                </figure> <!-- Item 7 du portfolio -->
+
+                <figure>
+                    <img src="./images/portfolio/08.jpg" alt="Nos réalisations">
+                    <figcaption>
+                        <h3>Nos réalisations</h3>
+                        <p>Cliquez sur l'oeil pour plus d'infos</p>
+                        <div>
+                            <p>
+                                <a href="./images/portfolio/full.jpg"><i class="fa fa-eye"></i></a>
+                            </p>
+                        </div>
+                    </figcaption>
+                </figure> <!-- Item 8 du portfolio -->
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact">
+                <!-- Carte Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5248.431204606119!2d2.3454415680663883!3d48.873166307519575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d'Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1484233326288" width="600" height="450" style="border:0" allowfullscreen=""></iframe>
+               
+                <div class="box_contact"> 
+                     <form  id="contact">
+                            <h2>Contact Info</h2>
+                            <p><span>WebAgency SAS</span><br>25 rue d'Hauteville, 75010 PARIS<br>Tél : 01-32-45-67-89</p>
+                            <input type="text" name="name" placeholder="Nom">
+                            <input type="text" name="email" placeholder="E-mail">
+                            <input type="text" name="subject" placeholder="Sujet">
+                            <textarea name="message" placeholder="Message"></textarea>
+                            <p><a href="#" class="btn btn_lg btn_primary" title="Envoyer">Envoyer</a></p>
+                    </form> <!-- Formulaire de contact -->
+                </div>
+        </section>
+        <footer class="footer">
+            <p>- WEBAGENCY 2017 - tous droits réservés</p>
+        </footer>
+    </body>
+</html>   
